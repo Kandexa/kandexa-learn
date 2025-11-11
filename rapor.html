@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapor Hazırlama - Kandexa Learn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📊 Rapor Hazırlama</h1>
+    <p>Görevlerinizi buradan tamamlayabilirsiniz.</p>
+  </header>
+
+  <main>
+    <section id="report">
+      <h2>📝 Rapor Hazırlama</h2>
+      <p>Lütfen rapor başlığını ve içeriğini girin:</p>
+
+      <label for="report-title">Rapor Başlığı:</label>
+      <input type="text" id="report-title" placeholder="Rapor başlığını girin">
+
+      <label for="report-content">Rapor İçeriği:</label>
+      <textarea id="report-content" placeholder="Raporunuzu buraya yazın" rows="6"></textarea>
+
+      <button id="save-report">Raporu Kaydet</button>
+    </section>
+
+    <section id="saved-reports">
+      <h2>📂 Kaydedilen Raporlar</h2>
+      <div id="reports-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Kandexa Learn | Tüm Hakları Saklıdır</p>
+  </footer>
+
+  <script src="rapor.js"></script>
+</body>
+</html>

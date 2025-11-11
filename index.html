@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kendexa Learn - Ana Sayfa</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      width: 90%;
+      max-width: 500px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    p {
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+    .logout-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #aaa;
+      margin-top: 30px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .logout-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      color: #fff;
+    }
+
+    .welcome {
+      margin-bottom: 25px;
+      font-size: 18px;
+      color: #9f9fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Kendexa Learn</h1>
+    <p class="welcome">Hoş geldin, <span id="usernameDisplay"></span> 👋</p>
+
+    <div class="btn-container">
+      <a href="rapor.html" class="btn">📝 Not Alma</a>
+      <a href="rehber.html" class="btn">📘 Şirket Rehberi</a>
+      <a href="#" class="btn">🔒 Güvenli Bağlantılar</a>
+    </div>
+
+    <button id="logoutBtn" class="logout-btn">🚪 Çıkış Yap</button>
+  </div>
+
+  <script>
+    const username = localStorage.getItem("kendexaUser");
+    const usernameDisplay = document.getElementById("usernameDisplay");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    // Eğer kullanıcı girişi yoksa login sayfasına yönlendir
+    if (!username) {
+      window.location.href = "login.html";
+    } else {
+      usernameDisplay.textContent = username;
+    }
+
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("kendexaUser");
+      localStorage.removeItem("kendexaPass");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>

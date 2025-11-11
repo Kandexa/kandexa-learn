@@ -1,0 +1,216 @@
+/* Genel Ayarlar */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f4f6f8, #e9eff5);
+  color: #333;
+}
+
+header {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 { margin: 0; font-size: 2.5rem; }
+header p { font-size: 1.2rem; }
+
+main { padding: 30px 20px; }
+
+footer { background-color: #333; color: white; text-align: center; padding: 20px; }
+
+/* Rapor Sayfası */
+#report {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+#report label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+#report input, #report textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+#report input:focus, #report textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+#save-report {
+  background: linear-gradient(90deg, #4a90e2, #50e3c2);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, background 0.2s;
+}
+
+#save-report:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #357ABD, #3DB6A1);
+}
+
+/* Kaydedilen Raporlar */
+#saved-reports { max-width: 700px; margin: 40px auto; }
+
+.report-card {
+  background-color: #f9f9f9;
+  border-left: 6px solid #4a90e2;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.report-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.report-card h3 { margin: 0 0 5px 0; }
+.report-card p { margin: 0; font-size: 0.95rem; color: #555; }
+.report-card small { display: block; margin-top: 5px; font-size: 0.8rem; color: #888; }
+/* Ana Sayfa Özellik Kartları */
+.feature-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 { margin-bottom: 10px; }
+.feature-card p { margin-bottom: 15px; color: #555; }
+
+.feature-card button {
+  background: linear-gradient(90deg, #4a90e2, #50e3c2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.feature-card button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #357ABD, #3DB6A1);
+}
+.report-actions {
+  margin-top: 10px;
+}
+
+.report-actions button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.report-actions button:hover {
+  transform: scale(1.05);
+}
+
+.report-actions button:last-child {
+  background-color: #e24a4a; /* Sil butonu kırmızı */
+}
+.guide-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.guide-card h3 { margin-bottom: 10px; }
+.guide-card p { margin-bottom: 15px; color: #555; }
+
+.guide-card button {
+  background: linear-gradient(90deg, #4a90e2, #50e3c2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.guide-card button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #357ABD, #3DB6A1);
+}
+
+.guide-card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+.steps-list {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.steps-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.steps-list li input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.steps-list li input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #4CAF50;
+}
+
+/* Gizli class */
+.hidden {
+  display: none;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kendexa Learn - Giriş</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #232526, #414345);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      width: 90%;
+      max-width: 380px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: #aaa;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .password-container {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 12px;
+      top: 13px;
+      cursor: pointer;
+      color: #ddd;
+      font-size: 16px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      border: none;
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    #message {
+      margin-top: 15px;
+      font-size: 14px;
+      min-height: 18px;
+      transition: 0.3s;
+    }
+
+    .success {
+      color: #90ee90;
+    }
+
+    .error {
+      color: #ff7373;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Kendexa Learn</h1>
+    <p>Şirket portalına güvenli giriş yapın</p>
+
+    <input type="text" id="username" placeholder="Kullanıcı Adı">
+    
+    <div class="password-container">
+      <input type="password" id="password" placeholder="Şifre">
+      <span id="togglePassword" class="toggle-password">👁️</span>
+    </div>
+
+    <button id="loginBtn" class="btn">🔑 Giriş Yap / Hesap Oluştur</button>
+    <p id="message"></p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

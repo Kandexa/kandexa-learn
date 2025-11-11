@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Şirket Rehberleri - Kandexa Learn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📋 Şirket Rehberleri</h1>
+    <p>Şirket süreçlerini daha hızlı ve düzenli yönetmek için rehberler</p>
+  </header>
+
+  <main>
+    <section id="guides">
+
+      <!-- Rapor Hazırlama -->
+      <div class="guide-card">
+        <h3>Rapor Hazırlama</h3>
+        <button onclick="toggleSteps('rapor')">Detay</button>
+        <ul id="rapor-steps" class="steps-list hidden"></ul>
+      </div>
+
+      <!-- Veri Kontrol -->
+      <div class="guide-card">
+        <h3>Veri Kontrol</h3>
+        <button onclick="toggleSteps('veri')">Detay</button>
+        <ul id="veri-steps" class="steps-list hidden"></ul>
+      </div>
+
+      <!-- Proje Takip -->
+      <div class="guide-card">
+        <h3>Proje Takip</h3>
+        <button onclick="toggleSteps('proje')">Detay</button>
+        <ul id="proje-steps" class="steps-list hidden"></ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Kandexa Learn | Tüm Hakları Saklıdır</p>
+  </footer>
+
+  <script src="rehber.js"></script>
+</body>
+</html>
