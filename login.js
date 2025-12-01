@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const message = document.getElementById("message");
   const togglePassword = document.getElementById("togglePassword");
 
-  // Şifre göster/gizle
   togglePassword.addEventListener("click", () => {
     const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
     passwordInput.setAttribute("type", type);
@@ -25,13 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedPass = localStorage.getItem("kendexaPass");
 
     if (!savedUser || !savedPass) {
-      // Yeni kullanıcı oluştur
+   
       localStorage.setItem("kendexaUser", username);
       localStorage.setItem("kendexaPass", password);
       showMessage("✅ Hesap oluşturuldu! Yönlendiriliyorsunuz...", "success");
       setTimeout(() => window.location.href = "index.html", 1500);
     } else {
-      // Giriş kontrolü
+
       if (username === savedUser && password === savedPass) {
         showMessage("✅ Giriş başarılı! Yönlendiriliyorsunuz...", "success");
         setTimeout(() => window.location.href = "index.html", 1500);
