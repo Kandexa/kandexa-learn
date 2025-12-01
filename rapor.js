@@ -1,10 +1,8 @@
 const saveButton = document.getElementById('save-report');
 const reportsList = document.getElementById('reports-list');
 
-// Raporları hafızada tutacak dizi
 let reports = [];
 
-// Yeni rapor kaydet
 saveButton.addEventListener('click', () => {
   const title = document.getElementById('report-title').value;
   const content = document.getElementById('report-content').value;
@@ -17,20 +15,16 @@ saveButton.addEventListener('click', () => {
   const newReport = { title, content, date: new Date() };
   reports.push(newReport);
 
-  // Alt listeyi güncelle
   renderReports();
 
-  // Kutuları temizle
   document.getElementById('report-title').value = "";
   document.getElementById('report-content').value = "";
 
-  // Animasyon
   const section = document.getElementById('report');
   section.style.backgroundColor = "#dff7e1";
   setTimeout(() => { section.style.backgroundColor = "white"; }, 500);
 });
 
-// Raporları ekranda gösterme fonksiyonu
 function renderReports() {
   reportsList.innerHTML = "";
   reports.forEach(report => {
@@ -44,7 +38,7 @@ function renderReports() {
     reportsList.appendChild(div);
   });
 }
-// Raporları ekranda gösterme fonksiyonu
+
 function renderReports() {
   reportsList.innerHTML = "";
   reports.forEach((report, index) => {
@@ -63,7 +57,6 @@ function renderReports() {
   });
 }
 
-// Rapor silme fonksiyonu
 function deleteReport(index) {
   if(confirm("Bu raporu silmek istediğinizden emin misiniz?")) {
     reports.splice(index, 1);
@@ -71,7 +64,6 @@ function deleteReport(index) {
   }
 }
 
-// Rapor düzenleme fonksiyonu
 function editReport(index) {
   const report = reports[index];
   const newTitle = prompt("Yeni başlık girin:", report.title);
