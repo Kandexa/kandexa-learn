@@ -1,4 +1,3 @@
-// Rehber adımları
 const guides = {
   'rapor': [
     'Verileri topla',
@@ -18,7 +17,6 @@ const guides = {
   ]
 };
 
-// Listeyi açıp kapatma ve adımları ekleme
 function toggleSteps(id) {
   const ul = document.getElementById(`${id}-steps`);
   if (ul.classList.contains('hidden')) {
